@@ -6,6 +6,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/style/styles.css">
 </head>
 <body>
@@ -24,31 +25,31 @@
                             <a class="nav-link active" aria-current="page" href="#"></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link"  id="dashboard-nav" href="#">
                                 <img src="assets/icon/icons8-home-48.png" width="40px" height="40px">
                                 Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/customer.html">
+                            <a class="nav-link" id="customer-nav" href="#">
                                 <img src="assets/icon/icons8-customer-96.png" width="40px" height="40px">
                                 Customer</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/item.html">
+                            <a class="nav-link" id="item-nav" href="#">
                                 <img src="assets/icon/icons8-item-64.png" width="40px" height="40px">
                                 Products</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/placeOrder.html">
+                            <a class="nav-link" id="order-nav" href="#">
                                 <img src="assets/icon/icons8-order-96.png" width="40px" height="40px">
                                 Orders</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/invoice.html">
+                            <a class="nav-link" id="invoice-nav" href="#">
                                 <img src="assets/icon/icons8-invoice-96.png" width="40px" height="40px">
                                 Invoice</a>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/setting.html">
+                            <a class="nav-link" id="setting-nav" href="#">
                                 <img src="assets/icon/icons8-setting-90.png" width="40px" height="40px">
                                 Settings</a>
                         </li>
@@ -65,7 +66,7 @@
 
 <!------------------------dashboard------------------------------------->
 
-    <div class="container">
+    <div class="container" id="dashboard-content">
         <div class="current-date">
             <i class="bi bi-calendar3"></i> <span id="currentDate"></span>
         </div>
@@ -200,183 +201,190 @@
     </div>
 
     <!-------------------------customer---------------------------->
-    <div class="container" id="sec">
-        <section>
-            <h1 class="h2" id="title"><i class="bi bi-people-fill me-2"></i>Customer Management</h1>
 
-            <div class="row mb-4">
-                <div class="col-md-6">
-                    <div class="input-group">
-                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                            <i class="bi bi-funnel-fill"></i> Filter
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">All Customers</a></li>
-                            <li><a class="dropdown-item" href="#">Active</a></li>
-                            <li><a class="dropdown-item" href="#">Inactive</a></li>
-                        </ul>
-                        <input type="text" class="form-control" placeholder="Search customers...">
-                        <button class="btn btn-primary" type="button">
-                            <i class="bi bi-search"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
+    <div class="container" id="customer-content">
+        <div id="sec">
+            <section>
+                <h1 class="h2" id="title"><i class="bi bi-people-fill me-2"></i>Customer Management</h1>
 
-            <form id="customerForm">
-                <div class="row">
+                <div class="row mb-4">
                     <div class="col-md-6">
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingId" name="id" placeholder=" " autocomplete="username">
-                            <label for="floatingId"><i class="bi bi-person-badge"></i> Customer ID</label>
-                        </div>
-
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingName" name="name" placeholder=" " autocomplete="name">
-                            <label for="floatingName"><i class="bi bi-person"></i> Full Name</label>
-                        </div>
-
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingEmail" name="email" placeholder=" " autocomplete="email">
-                            <label for="floatingEmail"><i class="bi bi-envelope"></i> Email Address</label>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" id="floatingAddress" name="address" placeholder=" " style="height: 100px" autocomplete="street-address"></textarea>
-                            <label for="floatingAddress"><i class="bi bi-house-door"></i> Address</label>
-                        </div>
-
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingNic" name="nic" placeholder=" " autocomplete="nic">
-                            <label for="floatingNic"><i class="bi bi-credit-card"></i> NIC/Identification</label>
-                        </div>
-
-                        <div class="form-floating mb-3">
-                            <input type="tel" class="form-control" id="floatingContact" name="contact" placeholder=" " autocomplete="tel">
-                            <label for="floatingContact"><i class="bi bi-telephone"></i> Contact Number</label>
+                        <div class="input-group">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-funnel-fill"></i> Filter
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">All Customers</a></li>
+                                <li><a class="dropdown-item" href="#">Active</a></li>
+                                <li><a class="dropdown-item" href="#">Inactive</a></li>
+                            </ul>
+                            <input type="text" class="form-control" placeholder="Search customers...">
+                            <button class="btn btn-primary" type="button">
+                                <i class="bi bi-search"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <div class="action-buttons text-end">
-                    <button type="button" class="btn btn-success" id="BtnSubmit">
-                        <i class="bi bi-check-circle"></i> Save
-                    </button>
-                    <button type="button" class="btn btn-danger" id="BtnDelete">
-                        <i class="bi bi-trash"></i> Delete
-                    </button>
-                    <button type="button" class="btn btn-info text-white" id="BtnReset">
-                        <i class="bi bi-arrow-counterclockwise"></i> Reset
-                    </button>
+                <form id="customerForm">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingId" name="id" placeholder=" " autocomplete="username">
+                                <label for="floatingId"><i class="bi bi-person-badge"></i> Customer ID</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingName" name="name" placeholder=" " autocomplete="name">
+                                <label for="floatingName"><i class="bi bi-person"></i> Full Name</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingEmail" name="email" placeholder=" " autocomplete="email">
+                                <label for="floatingEmail"><i class="bi bi-envelope"></i> Email Address</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="floatingAddress" name="address" placeholder=" " style="height: 100px" autocomplete="street-address"></textarea>
+                                <label for="floatingAddress"><i class="bi bi-house-door"></i> Address</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingNic" name="nic" placeholder=" " autocomplete="nic">
+                                <label for="floatingNic"><i class="bi bi-credit-card"></i> NIC/Identification</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="tel" class="form-control" id="floatingContact" name="contact" placeholder=" " autocomplete="tel">
+                                <label for="floatingContact"><i class="bi bi-telephone"></i> Contact Number</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons text-end">
+                        <button type="button" class="btn btn-success" id="BtnSubmit">
+                            <i class="bi bi-check-circle"></i> Save
+                        </button>
+                        <button type="button" class="btn btn-danger" id="BtnDelete">
+                            <i class="bi bi-trash"></i> Delete
+                        </button>
+                        <button type="button" class="btn btn-info text-white" id="BtnReset">
+                            <i class="bi bi-arrow-counterclockwise"></i> Reset
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <section>
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped">
+                        <thead class="table-primary">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">NIC</th>
+                            <th scope="col">Contact</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                        <tr>
+
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </form>
-        </section>
-
-        <section>
-            <div class="table-responsive">
-                <table class="table table-hover table-striped">
-                    <thead class="table-primary">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Address</th>
-                        <th scope="col">NIC</th>
-                        <th scope="col">Contact</th>
-                    </tr>
-                    </thead>
-                    <tbody id="tableBody">
-                    <tr>
-
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+            </section>
+        </div>
     </div>
+
 
     <!------------------item----------------------------------->
 
-    <div class="container" id="item-sec">
-        <section>
-            <h1 class="h2" id="titleitem"><i class="bi bi-box-seam"></i> Product Management</h1>
+    <div class="container" id="item-content">
+        <div class="container" id="item-sec">
+            <section>
+                <h1 class="h2" id="titleitem"><i class="bi bi-box-seam"></i> Product Management</h1>
 
-            <form id="itemForm">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingItemId" placeholder=" ">
-                            <label for="floatingItemId"><i class="bi bi-upc"></i> Product ID</label>
+                <form id="itemForm">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingItemId" placeholder=" ">
+                                <label for="floatingItemId"><i class="bi bi-upc"></i> Product ID</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingDesc" placeholder=" ">
+                                <label for="floatingDesc"><i class="bi bi-card-text"></i> Description</label>
+                            </div>
                         </div>
 
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingDesc" placeholder=" ">
-                            <label for="floatingDesc"><i class="bi bi-card-text"></i> Description</label>
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="floatingPrice" placeholder=" " step="0.01">
+                                <label for="floatingPrice"><i class="bi bi-currency-dollar"></i> Price</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="floatingQty" placeholder=" ">
+                                <label for="floatingQty"><i class="bi bi-box"></i> Quantity</label>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-md-6">
-                        <div class="form-floating mb-3">
-                            <input type="number" class="form-control" id="floatingPrice" placeholder=" " step="0.01">
-                            <label for="floatingPrice"><i class="bi bi-currency-dollar"></i> Price</label>
-                        </div>
-
-                        <div class="form-floating mb-3">
-                            <input type="number" class="form-control" id="floatingQty" placeholder=" ">
-                            <label for="floatingQty"><i class="bi bi-box"></i> Quantity</label>
+                    <div class="mb-3">
+                        <label for="formFileMultiple" class="form-label"><i class="bi bi-image"></i> Product Image</label>
+                        <input class="form-control" type="file" id="formFileMultiple" accept="image/*">
+                        <div id="imagePreview" class="mt-2">
+                            <span class="text-muted">Preview</span>
                         </div>
                     </div>
-                </div>
 
-                <div class="mb-3">
-                    <label for="formFileMultiple" class="form-label"><i class="bi bi-image"></i> Product Image</label>
-                    <input class="form-control" type="file" id="formFileMultiple" accept="image/*">
-                    <div id="imagePreview" class="mt-2">
-                        <span class="text-muted">Preview</span>
+                    <div class="action-buttons text-end">
+                        <button type="button" class="btn btn-success" id="Btn-Submit">
+                            <i class="bi bi-check-circle"></i> Save
+                        </button>
+                        <button type="button" class="btn btn-danger" id="Btn-Delete">
+                            <i class="bi bi-trash"></i> Delete
+                        </button>
+                        <button type="button" class="btn btn-info" id="Btn-Reset">
+                            <i class="bi bi-arrow-counterclockwise"></i> Reset
+                        </button>
                     </div>
+                </form>
+            </section>
+
+            <section>
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped">
+                        <thead class="table-primary">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Image</th>
+                        </tr>
+                        </thead>
+                        <tbody id="table-body">
+                        <tr>
+
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
-
-                <div class="action-buttons text-end">
-                    <button type="button" class="btn btn-success" id="Btn-Submit">
-                        <i class="bi bi-check-circle"></i> Save
-                    </button>
-                    <button type="button" class="btn btn-danger" id="Btn-Delete">
-                        <i class="bi bi-trash"></i> Delete
-                    </button>
-                    <button type="button" class="btn btn-info" id="Btn-Reset">
-                        <i class="bi bi-arrow-counterclockwise"></i> Reset
-                    </button>
-                </div>
-            </form>
-        </section>
-
-        <section>
-            <div class="table-responsive">
-                <table class="table table-hover table-striped">
-                    <thead class="table-primary">
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Image</th>
-                    </tr>
-                    </thead>
-                    <tbody id="table-body">
-                    <tr>
-
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+            </section>
+        </div>
     </div>
+
 
     <!---------place order---------------------------------->
 
-    <div class="container">
+    <div class="container" id="order-content">
         <section>
             <div id="fullPg">
                 <section id="sidePg">
@@ -460,7 +468,7 @@
 
     <!--------------------settings------------------------->
 
-    <div class="container">
+    <div class="container" id="setting-content">
         <div class="row">
             <main class="container">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -683,7 +691,7 @@
 
     <!-----------------------invoice-------------------------->
 
-    <div class="container">
+    <div class="container" id="invoice-content">
         <div class="row">
             <main class="container">
                 <div class="card mb-4 no-print">
@@ -947,12 +955,79 @@
         </div>
     </div>
 
+    <script src="assets/lib/jquery-3.7.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="assets/lib/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="controller/customerController.js" type="module"></script>
     <script src="controller/itemController.js" type="module"></script>
     <script src="controller/orderController.js" type="module"></script>
     <script src="controller/invoiceController.js" type="module"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#customer-content').css("display", "none");
+        $('#item-content').css("display", "none");
+        $('#order-content').css("display", "none");
+        $('#setting-content').css("display", "none");
+        $('#invoice-content').css("display", "none");
+
+        $('#customer-nav').on('click', function() {
+            $('#customer-content').css("display", "block");
+            $('#item-content').css("display", "none");
+            $('#order-content').css("display", "none");
+            $('#setting-content').css("display", "none");
+            $('#invoice-content').css("display", "none");
+            $('#dashboard-content').css("display", "none");
+        })
+
+        $('#item-nav').on('click', function() {
+            $('#customer-content').css("display", "none");
+            $('#item-content').css("display", "block");
+            $('#order-content').css("display", "none");
+            $('#setting-content').css("display", "none");
+            $('#invoice-content').css("display", "none");
+            $('#dashboard-content').css("display", "none");
+        })
+
+        $('#order-nav').on('click', function() {
+            $('#customer-content').css("display", "none");
+            $('#item-content').css("display", "none");
+            $('#order-content').css("display", "block");
+            $('#setting-content').css("display", "none");
+            $('#invoice-content').css("display", "none");
+            $('#dashboard-content').css("display", "none");
+        })
+
+        $('#setting-nav').on('click', function() {
+            $('#customer-content').css("display", "none");
+            $('#item-content').css("display", "none");
+            $('#order-content').css("display", "none");
+            $('#setting-content').css("display", "block");
+            $('#invoice-content').css("display", "none");
+            $('#dashboard-content').css("display", "none");
+        })
+
+        $('#invoice-nav').on('click', function() {
+            $('#customer-content').css("display", "none");
+            $('#item-content').css("display", "none");
+            $('#order-content').css("display", "none");
+            $('#setting-content').css("display", "none");
+            $('#invoice-content').css("display", "block");
+            $('#dashboard-content').css("display", "none");
+        })
+
+        $('#dashboard-nav').on('click', function() {
+            $('#customer-content').css("display", "none");
+            $('#item-content').css("display", "none");
+            $('#order-content').css("display", "none");
+            $('#setting-content').css("display", "none");
+            $('#invoice-content').css("display", "none");
+            $('#dashboard-content').css("display", "block");
+        })
+
+    });
+</script>
 </body>
 </html>

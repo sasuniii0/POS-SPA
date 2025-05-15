@@ -101,30 +101,6 @@ body {
 
 /*customer styles*/
 
-:root {
-    --primary-color: #0c38bf;
-    --secondary-color: #1cc88a;
-    --accent-color: #f6c23e;
-    --light-bg: #f8f9fc;
-}
-
-body {
-    background-color: #f5f7fb;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.navbar {
-    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
-}
-
-.nav-link {
-    transition: all 0.3s ease;
-}
-
-.nav-link:hover {
-    transform: translateY(-2px);
-}
-
 #sec {
     background-color: white;
     border-radius: 0.5rem;
@@ -184,31 +160,6 @@ body {
 
 
 /*item styles*/
-
-:root {
-    --primary-color: #0c38bf;
-    --secondary-color: #1cc88a;
-    --accent-color: #f6c23e;
-    --light-bg: #f8f9fc;
-}
-
-body {
-    background-color: #f5f7fb;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.navbar {
-    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
-}
-
-.nav-link {
-    transition: all 0.3s ease;
-}
-
-.nav-link:hover {
-    transform: translateY(-2px);
-}
-
 #item-sec {
     background-color: white;
     border-radius: 0.5rem;
@@ -287,30 +238,6 @@ body {
 }
 
 /*orders styles*/
-
-:root {
-    --primary-color: #0c38bf;
-    --secondary-color: #1cc88a;
-    --accent-color: #f6c23e;
-    --light-bg: #f8f9fc;
-}
-
-body {
-    background-color: #f5f7fb;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.navbar {
-    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
-}
-
-.nav-link {
-    transition: all 0.3s ease;
-}
-
-.nav-link:hover {
-    transform: translateY(-2px);
-}
 
 #fullPg {
     display: flex;
@@ -451,16 +378,6 @@ body{
 
 /*invoice styles*/
 
-:root {
-    --primary-color: #4e73df;
-    --secondary-color: #f8f9fc;
-    --accent-color: #dddfeb;
-}
-
-body {
-    background-color: #dcdcdc;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 .row{
     padding: 15px;
 }
